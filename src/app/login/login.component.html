@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Login</div>
+    <div class="content">
+      <form name= "myForms" class="form" [formGroup]="myForm">
+        <div class="user-details">
+      <div class="input-box">
+            <span class="details">UserId</span>
+            <div class="form-group">
+              <input formControlName="UserId" name ="UserId" type="Number" placeholder="Registeration Number" class="form-control rounded-0" 
+      required >
+      </div>
+          </div>
+        <div class="input-box">
+            <span class="details">Password</span>
+            <div class="form-group">
+              <input formControlName="Password" name ="Password" type="password" placeholder="password" class="form-control rounded-0" 
+      required >
+      </div>
+          </div>
+          
+        </div>
+       
+        <div class="button">
+          <input (click) = "loginUser()" type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
