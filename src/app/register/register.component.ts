@@ -27,10 +27,20 @@ export class RegisterComponent implements OnInit {
       phone: new FormControl('',Validators.required), 
       gender: new FormControl('',Validators.required), 
     });
+    console.log("hi");
   }
 
   registerUser(){
     console.log(this.myForm.value);
+    this.auth.fname = this.myForm.value.FirstName;
+    this.auth.lname = this.myForm.value.LastName;
+    this.auth.uid = this.myForm.value.UserId;
+    this.auth.dob = this.myForm.value.Dob;
+    this.auth.pass = this.myForm.value.Password;
+    this.auth.email = this.myForm.value.email;
+    this.auth.phone = this.myForm.value.phone;
+    this.auth.gen = this.myForm.value.gender;
+    console.log(this.auth.fname);
   }
 
 }
